@@ -1,0 +1,49 @@
+{
+   "abstract" : "Declare conflicts for your distro",
+   "author" : [
+      "Dave Rolsky <autarch@urth.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.102345, CPAN::Meta::Converter version 2.101670",
+   "license" : [
+      "artistic_2"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Dist-Zilla-Plugin-Conflicts",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dist::CheckConflicts" : 0,
+            "Dist::Zilla" : "4",
+            "Moose::Autobox" : "0.09"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.88"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "mailto" : "bug-dist-zilla-plugin-conflicts@rt.cpan.org",
+         "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dist-Zilla-Plugin-Conflicts"
+      },
+      "repository" : {
+         "type" : "hg",
+         "url" : "http://hg.urth.org/hg/Dist-Zilla-Plugin-Conflicts",
+         "web" : "http://hg.urth.org/hg/Dist-Zilla-Plugin-Conflicts"
+      }
+   },
+   "version" : "0.01"
+}
+
