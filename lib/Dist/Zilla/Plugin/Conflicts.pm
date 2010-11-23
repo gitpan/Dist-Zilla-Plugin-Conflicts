@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Conflicts;
 BEGIN {
-  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.01';
+  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.02';
 }
 
 use strict;
@@ -8,7 +8,6 @@ use warnings;
 
 use Dist::CheckConflicts 0.01 ();
 use Moose::Autobox 0.09;
-use Test::ConsistentVersion;
 
 use Moose;
 
@@ -235,7 +234,7 @@ Dist::Zilla::Plugin::Conflicts - Declare conflicts for your distro
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -273,6 +272,11 @@ you conflict with:
 
 The version listed is the last version that I<doesn't> work. In other words,
 any version of C<Module::X> greater than 0.02 should work with this release.
+
+B<Note:> Currently, this plugin only works properly if it is listed in your
+F<dist.ini> I<after> the plugin which generates your F<Makefile.PL> or
+F<Build.PL>. This is a limitation of L<Dist::Zilla> that will hopefully be
+addressed in a future release.
 
 =head1 SUPPORT
 
