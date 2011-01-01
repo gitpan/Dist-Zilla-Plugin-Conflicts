@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.61.
+signed via the Module::Signature module, version 0.64.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,16 +14,16 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 32288950ca687f631aaa249bfa8404326c62f809 Changes
+SHA1 f30b3288a2793824584a1ee2ba4823550276a8a9 Changes
 SHA1 0a1319cb06bf4110a84505316d36e549892680ad INSTALL
 SHA1 23c628b4a8a36738405ccdacaeb912d2e727b4c0 LICENSE
 SHA1 54eed829329481658a320158552e6ad06799c282 MANIFEST
-SHA1 6cc4bfe1204f656f8ec27651ef041112dc3b1a29 META.json
-SHA1 c8eef1db2562718aaee744775c2387ad210231f1 META.yml
-SHA1 d5ebf60dce697b6ab3855474dbd16bca141e6dcf Makefile.PL
-SHA1 1555a453b18613f7106de881f1ffc231d4e81e9a README
-SHA1 84c608a4bc8cbcf755f69af425e55a92e1a4c792 dist.ini
-SHA1 be574fc95a3a3069fc20fbbf4e939bd454a8fe66 lib/Dist/Zilla/Plugin/Conflicts.pm
+SHA1 d967d5609aec56142956e508b3aa131668ac86e9 META.json
+SHA1 1b24e6009ff48f17db92418e631175bc34907351 META.yml
+SHA1 f6854e89e07bb643e2ead10406267d0eae9f2cbc Makefile.PL
+SHA1 5cd9ee7dcdaca6bb70c3c3dd6dfece9fbf77f274 README
+SHA1 ca6c8740edb51a6eda9a399147ba8ca785dd3874 dist.ini
+SHA1 577a789968b258554f03349a371d39e13a1c50e4 lib/Dist/Zilla/Plugin/Conflicts.pm
 SHA1 030ec5839341f6d46c302b9f644c9badb5f5d76e t/01-compile.t
 SHA1 a032c41ef6887fab1b900669c2d304fab46680e2 t/release-eol.t
 SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
@@ -31,7 +31,7 @@ SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAkzrLRQACgkQIgMCsV8qvRJWxwCfX0gPFuDYvhMM7HeEFz53tuwD
-0bQAn3IvRMFzbD0XBZ9BPgcOXnMieOQ6
-=Ri4C
+iEYEARECAAYFAk0ecGAACgkQIgMCsV8qvRIKIACeKgiowBjcu/cRd0YUBfcRyqOO
+jZkAn38sjNATZlcEYse7M95VaNMm37+6
+=acwj
 -----END PGP SIGNATURE-----
