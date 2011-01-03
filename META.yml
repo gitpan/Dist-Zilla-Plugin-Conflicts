@@ -14,10 +14,10 @@ meta-spec:
   version: 1.4
 name: Dist-Zilla-Plugin-Conflicts
 requires:
-  Dist::CheckConflicts: 0
+  Dist::CheckConflicts: 0.02
   Dist::Zilla: 4
   Moose::Autobox: 0.09
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dist-Zilla-Plugin-Conflicts
   repository: http://hg.urth.org/hg/Dist-Zilla-Plugin-Conflicts
-version: 0.04
+version: 0.05

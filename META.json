@@ -21,7 +21,7 @@
       },
       "runtime" : {
          "requires" : {
-            "Dist::CheckConflicts" : 0,
+            "Dist::CheckConflicts" : "0.02",
             "Dist::Zilla" : "4",
             "Moose::Autobox" : "0.09"
          }
@@ -44,6 +44,6 @@
          "web" : "http://hg.urth.org/hg/Dist-Zilla-Plugin-Conflicts"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }
 

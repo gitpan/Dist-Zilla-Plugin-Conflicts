@@ -22,11 +22,11 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'artistic_2',
   'NAME' => 'Dist::Zilla::Plugin::Conflicts',
   'PREREQ_PM' => {
-    'Dist::CheckConflicts' => '0',
+    'Dist::CheckConflicts' => '0.02',
     'Dist::Zilla' => '4',
     'Moose::Autobox' => '0.09'
   },
-  'VERSION' => '0.04',
+  'VERSION' => '0.05',
   'test' => {
     'TESTS' => 't/*.t'
   }
