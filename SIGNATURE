@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.64.
+signed via the Module::Signature module, version 0.66.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,16 +14,16 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 77bdf54366d46ea15cfe1765eab6fca9d58554a2 Changes
+SHA1 34268aeffd3974ecc3068baa5e345a80d8de288a Changes
 SHA1 0a1319cb06bf4110a84505316d36e549892680ad INSTALL
-SHA1 a7c133d863a5465472a0439d8cc3b2062b7a9efb LICENSE
+SHA1 c715d20265d2931c7564fc64abfdc4f8ff33e297 LICENSE
 SHA1 54eed829329481658a320158552e6ad06799c282 MANIFEST
-SHA1 bcd0071a92c9cbc7ac92ed222b444264c5f3cbb0 META.json
-SHA1 96badbb3ec251b744f22e71c24ff1f574e87d39a META.yml
-SHA1 457c30a61eb71731deb5ac2c9c581b5eb84568c0 Makefile.PL
-SHA1 586f21804ea665dbeab70d29a0baa8b8c77d0169 README
-SHA1 3bd571f47e298f12b752281a42d10f3f1d3a0138 dist.ini
-SHA1 5c3fccb6ad7d3c88013d3e77f3e2f09a703ea7a6 lib/Dist/Zilla/Plugin/Conflicts.pm
+SHA1 1f79b661c556a4e9d4da688d0bc5265d53e0e141 META.json
+SHA1 2073594b3aa48f500cc896be2294b57e557d1ccf META.yml
+SHA1 7b0e899998c17534e8b9f8822ca1663fd0c90f2a Makefile.PL
+SHA1 5b808b4767ba82061fc7eda6699612e6ebcb24e3 README
+SHA1 7a3be300dfcf820392effec2486b2ee5d1e217b7 dist.ini
+SHA1 48fc918403ee7ebef029b75250347f6b189474dd lib/Dist/Zilla/Plugin/Conflicts.pm
 SHA1 030ec5839341f6d46c302b9f644c9badb5f5d76e t/01-compile.t
 SHA1 a032c41ef6887fab1b900669c2d304fab46680e2 t/release-eol.t
 SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
@@ -31,7 +31,7 @@ SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAk0h700ACgkQIgMCsV8qvRJzNQCeKhjoH+7YRqlJyTrOHCDK6/Zt
-RVoAni2ZW9FCNw78kyQuZT7AcGgyIaeK
-=uKGk
+iEYEARECAAYFAk0zRR8ACgkQIgMCsV8qvRLF+gCfaE4Kt9p4NtdBJfC77tDsvN/7
+eFgAnidiZ0mWTDWpqmLRRgQxLD5RFlEs
+=H1KT
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Conflicts;
 BEGIN {
-  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.05';
+  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.06';
 }
 
 use strict;
@@ -57,8 +57,8 @@ sub BUILDARGS {
     return {
         zilla       => $zilla,
         plugin_name => $name,
-        _script     => $bin,
-        _conflicts  => \%args,
+        ( defined $bin ? ( _script => $bin ) : () ),
+        _conflicts => \%args,
     };
 }
 
@@ -322,11 +322,11 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 NAME
 
-Dist::Zilla::Plugin::Conflicts - Declare conflicts for your distro
+{{ $filename }} - Declare conflicts for your distro
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -419,7 +419,7 @@ This software is Copyright (c) 2011 by Dave Rolsky.
 
 This is free software, licensed under:
 
-  The Artistic License 2.0
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
 
