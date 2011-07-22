@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Conflicts;
 BEGIN {
-  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.07';
+  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.08';
 }
 
 use strict;
@@ -83,6 +83,11 @@ sub register_prereqs {
 
     $self->zilla->register_prereqs(
         { phase => 'configure' },
+        'Dist::CheckConflicts' => '0.02',
+    );
+
+    $self->zilla->register_prereqs(
+        { phase => 'runtime' },
         'Dist::CheckConflicts' => '0.02',
     );
 }
@@ -330,7 +335,7 @@ Dist::Zilla::Plugin::Conflicts - Declare conflicts for your distro
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 

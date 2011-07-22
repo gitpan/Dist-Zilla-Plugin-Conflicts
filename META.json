@@ -4,7 +4,7 @@
       "Dave Rolsky <autarch@urth.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.200012, CPAN::Meta::Converter version 2.110930",
    "license" : [
       "artistic_2"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
@@ -39,11 +39,11 @@
          "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dist-Zilla-Plugin-Conflicts"
       },
       "repository" : {
-         "type" : "hg",
-         "url" : "http://hg.urth.org/hg/Dist-Zilla-Plugin-Conflicts",
-         "web" : "http://hg.urth.org/hg/Dist-Zilla-Plugin-Conflicts"
+         "type" : "git",
+         "url" : "git://git.urth.org/Dist-Zilla-Plugin-Conflicts.git",
+         "web" : "http://git.urth.org/Dist-Zilla-Plugin-Conflicts.git"
       }
    },
-   "version" : "0.07"
+   "version" : "0.08"
 }
 

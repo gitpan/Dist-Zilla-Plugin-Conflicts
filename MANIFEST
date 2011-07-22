@@ -6,10 +6,11 @@ META.json
 META.yml
 Makefile.PL
 README
-SIGNATURE
 dist.ini
 lib/Dist/Zilla/Plugin/Conflicts.pm
 t/01-compile.t
-t/release-eol.t
+t/release-cpan-changes.t
 t/release-no-tabs.t
+t/release-pod-linkcheck.t
+t/release-pod-no404s.t
 t/release-pod-syntax.t
