@@ -1,11 +1,11 @@
 
 
 This archive contains the distribution Dist-Zilla-Plugin-Conflicts,
-version 0.08:
+version 0.09:
 
-  Declare conflicts for your distro
+  Provide information on conflicts for {{ $dist_name }}
 
-This software is Copyright (c) 2011 by Dave Rolsky.
+This software is Copyright (c) 2013 by Dave Rolsky.
 
 This is free software, licensed under:
 
