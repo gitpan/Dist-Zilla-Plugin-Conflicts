@@ -1,6 +1,9 @@
 package Dist::Zilla::Plugin::Conflicts;
 {
-  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.09';
+  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.10';
+}
+BEGIN {
+  $Dist::Zilla::Plugin::Conflicts::AUTHORITY = 'cpan:DROLSKY';
 }
 
 use strict;
@@ -288,6 +291,8 @@ sub check_conflicts {
 EOF
     }
 
+    return if $ENV{AUTOMATED_TESTING} || $ENV{NONINTERACTIVE_TESTING};
+
     # More or less copied from Module::Build
     return if $ENV{PERL_MM_USE_DEFAULT};
     return unless -t STDIN && ( -t STDOUT || !( -f STDOUT || -c STDOUT ) );
@@ -335,8 +340,9 @@ EOF
 sub metadata {
     my $self = shift;
 
-    return { x_conflicts => $self->_conflicts() };
+    return { x_breaks => $self->_conflicts() };
 }
+
 
 __PACKAGE__->meta->make_immutable;
 
@@ -354,7 +360,7 @@ Dist::Zilla::Plugin::Conflicts - Declare conflicts for your distro
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 
@@ -383,7 +389,12 @@ Second, it adds code to your F<Makefile.PL> or F<Build.PL> to load the
 generated module and print warnings if conflicts are detected.
 
 Finally, it adds the conflicts to the F<META.json> and/or F<META.yml> files
-under the "x_conflicts" key.
+under the "x_breaks" key.
+
+=for Pod::Coverage   gather_files
+  metadata
+  register_prereqs
+  setup_installer
 
 =head1 USAGE
 
