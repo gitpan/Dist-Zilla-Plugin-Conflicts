@@ -30,8 +30,8 @@ requires:
   strict: 0
   warnings: 0
 resources:
-  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Pg-CLI
-  homepage: http://metacpan.org/release/Pg-CLI
-  repository: git://git.urth.org/Pg-CLI.git
-version: 0.10
+  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-Conflicts
+  homepage: http://metacpan.org/release/Dist-Zilla-Plugin-Conflicts
+  repository: git://git.urth.org/Dist-Zilla-Plugin-Conflicts.git
+version: 0.11
 x_authority: cpan:DROLSKY

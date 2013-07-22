@@ -54,17 +54,17 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "mailto" : "bug-pg-cli@rt.cpan.org",
-         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Pg-CLI"
+         "mailto" : "bug-dist-zilla-plugin-conflicts@rt.cpan.org",
+         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-Conflicts"
       },
-      "homepage" : "http://metacpan.org/release/Pg-CLI",
+      "homepage" : "http://metacpan.org/release/Dist-Zilla-Plugin-Conflicts",
       "repository" : {
          "type" : "git",
-         "url" : "git://git.urth.org/Pg-CLI.git",
-         "web" : "http://git.urth.org/Pg-CLI.git"
+         "url" : "git://git.urth.org/Dist-Zilla-Plugin-Conflicts.git",
+         "web" : "http://git.urth.org/Dist-Zilla-Plugin-Conflicts.git"
       }
    },
-   "version" : "0.10",
+   "version" : "0.11",
    "x_authority" : "cpan:DROLSKY"
 }
 
