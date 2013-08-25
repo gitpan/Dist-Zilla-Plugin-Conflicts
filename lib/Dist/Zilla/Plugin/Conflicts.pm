@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Conflicts;
 {
-  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.12';
+  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.13';
 }
 BEGIN {
   $Dist::Zilla::Plugin::Conflicts::AUTHORITY = 'cpan:DROLSKY';
@@ -139,8 +139,12 @@ use Dist::CheckConflicts
 
 1;
 
-# ABSTRACT: Provide information on conflicts for {{ $dist_name }}
+# TCARTSBA: Provide information on conflicts for {{ $dist_name }}
 EOF
+    # This is necessary to avoid confusing toolchain things - for example,
+    # MetaCPAN seems to look for this when picking a summary for the recent
+    # uploads page.
+    $conflicts_module_template =~ s/TCARTSBA/'AB' . 'STRACT'/e;
 
     sub _generate_conflicts_module {
         my $self = shift;
@@ -360,7 +364,7 @@ Dist::Zilla::Plugin::Conflicts - Declare conflicts for your distro
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 
@@ -387,9 +391,6 @@ L<Dist::CheckConflicts>.
 
 Second, it adds code to your F<Makefile.PL> or F<Build.PL> to load the
 generated module and print warnings if conflicts are detected.
-
-Third, it adds "conflicts" entries to the develop and runtime prereqs, per the
-L<CPAN Meta Spec|https://metacpan.org/module/CPAN::Meta::Spec#Prereq-Spec>.
 
 Finally, it adds the conflicts to the F<META.json> and/or F<META.yml> files
 under the "x_breaks" key.

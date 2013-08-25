@@ -1,5 +1,5 @@
 {
-   "abstract" : "Provide information on conflicts for {{ $dist_name }}",
+   "abstract" : "Declare conflicts for your distro",
    "author" : [
       "Dave Rolsky <autarch@urth.org>"
    ],
@@ -65,7 +65,7 @@
          "web" : "http://git.urth.org/Dist-Zilla-Plugin-Conflicts.git"
       }
    },
-   "version" : "0.12",
+   "version" : "0.13",
    "x_authority" : "cpan:DROLSKY"
 }
 
