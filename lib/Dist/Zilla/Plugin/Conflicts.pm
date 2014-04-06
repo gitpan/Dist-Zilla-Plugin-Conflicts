@@ -1,11 +1,5 @@
 package Dist::Zilla::Plugin::Conflicts;
-{
-  $Dist::Zilla::Plugin::Conflicts::VERSION = '0.13';
-}
-BEGIN {
-  $Dist::Zilla::Plugin::Conflicts::AUTHORITY = 'cpan:DROLSKY';
-}
-
+$Dist::Zilla::Plugin::Conflicts::VERSION = '0.13001';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -344,7 +338,12 @@ EOF
 sub metadata {
     my $self = shift;
 
-    return { x_breaks => $self->_conflicts() };
+    my $conflicts = $self->_conflicts;
+    return {
+        x_breaks => {
+            map { $_ => '<= '. $conflicts->{$_} } keys %$conflicts
+        }
+    };
 }
 
 
@@ -358,13 +357,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Dist::Zilla::Plugin::Conflicts - Declare conflicts for your distro
 
 =head1 VERSION
 
-version 0.13
+version 0.13001
 
 =head1 SYNOPSIS
 
@@ -428,6 +429,24 @@ F<dist.ini> I<after> the plugin which generates your F<Makefile.PL> or
 F<Build.PL>. This is a limitation of L<Dist::Zilla> that will hopefully be
 addressed in a future release.
 
+=head1 SEE ALSO
+
+=over 4
+
+=item *
+
+L<Dist::CheckConflicts>
+
+=item *
+
+L<Dist::Zilla::Plugin::Breaks>
+
+=item *
+
+L<Dist::Zilla::Plugin::Test::CheckBreaks>
+
+=back
+
 =head1 SUPPORT
 
 Please report any bugs or feature requests to
@@ -458,7 +477,7 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2013 by Dave Rolsky.
+This software is Copyright (c) 2014 by Dave Rolsky.
 
 This is free software, licensed under:
 
