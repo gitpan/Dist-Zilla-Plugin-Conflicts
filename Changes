@@ -1,7 +1,13 @@
-0.13001 2014-04-06
+0.14    2014-04-06
 
-- format of x_breaks metadata fixed to properly indicate the problematic
-  version range (Karen Etheridge)
+- Same as 0.13001
+
+
+0.13001 2014-04-06 (TRIAL RELEASE)
+
+- Fixed the x_breaks metadata to properly indicate the problematic version
+  range. Patch by Karen Etheridge. RT #94467.
+
 
 0.13    2013-08-25
 

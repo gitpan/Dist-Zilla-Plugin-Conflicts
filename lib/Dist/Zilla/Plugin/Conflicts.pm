@@ -1,5 +1,5 @@
 package Dist::Zilla::Plugin::Conflicts;
-$Dist::Zilla::Plugin::Conflicts::VERSION = '0.13001';
+$Dist::Zilla::Plugin::Conflicts::VERSION = '0.14';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -357,15 +357,13 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 Dist::Zilla::Plugin::Conflicts - Declare conflicts for your distro
 
 =head1 VERSION
 
-version 0.13001
+version 0.14
 
 =head1 SYNOPSIS
 

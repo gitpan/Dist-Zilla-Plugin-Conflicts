@@ -4,7 +4,7 @@
       "Dave Rolsky <autarch@urth.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.140640",
+   "generated_by" : "Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.131560",
    "license" : [
       "artistic_2"
    ],
@@ -48,11 +48,9 @@
       },
       "test" : {
          "requires" : {
-            "File::Spec" : "0",
-            "IO::Handle" : "0",
-            "IPC::Open3" : "0",
-            "Test::More" : "0.88",
-            "perl" : "5.006"
+            "File::Find" : "0",
+            "File::Temp" : "0",
+            "Test::More" : "0.88"
          }
       }
    },
@@ -69,7 +67,7 @@
          "web" : "http://git.urth.org/Dist-Zilla-Plugin-Conflicts.git"
       }
    },
-   "version" : "0.13001",
+   "version" : "0.14",
    "x_authority" : "cpan:DROLSKY",
    "x_contributors" : [
       "Karen Etheridge <ether@cpan.org>"

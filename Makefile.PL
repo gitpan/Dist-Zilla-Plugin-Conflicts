@@ -36,12 +36,11 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
-    "File::Spec" => 0,
-    "IO::Handle" => 0,
-    "IPC::Open3" => 0,
+    "File::Find" => 0,
+    "File::Temp" => 0,
     "Test::More" => "0.88"
   },
-  "VERSION" => "0.13001",
+  "VERSION" => "0.14",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -57,9 +56,8 @@ my %FallbackPrereqs = (
   "Dist::Zilla::Role::MetaProvider" => 0,
   "Dist::Zilla::Role::PrereqSource" => 0,
   "Dist::Zilla::Role::TextTemplate" => 0,
-  "File::Spec" => 0,
-  "IO::Handle" => 0,
-  "IPC::Open3" => 0,
+  "File::Find" => 0,
+  "File::Temp" => 0,
   "Moose" => 0,
   "Moose::Autobox" => "0.09",
   "Test::More" => "0.88",

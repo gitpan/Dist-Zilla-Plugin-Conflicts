@@ -3,15 +3,13 @@ abstract: 'Declare conflicts for your distro'
 author:
   - 'Dave Rolsky <autarch@urth.org>'
 build_requires:
-  File::Spec: '0'
-  IO::Handle: '0'
-  IPC::Open3: '0'
+  File::Find: '0'
+  File::Temp: '0'
   Test::More: '0.88'
-  perl: '5.006'
 configure_requires:
   ExtUtils::MakeMaker: '6.30'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.131560'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -35,7 +33,7 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-Conflicts
   homepage: http://metacpan.org/release/Dist-Zilla-Plugin-Conflicts
   repository: git://git.urth.org/Dist-Zilla-Plugin-Conflicts.git
-version: '0.13001'
+version: '0.14'
 x_authority: cpan:DROLSKY
 x_contributors:
   - 'Karen Etheridge <ether@cpan.org>'
