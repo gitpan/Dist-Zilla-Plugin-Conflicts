@@ -1,3 +1,13 @@
+0.15    2014-08-31
+
+- Generate the Conflicts module as a FromCode file, so its content is not
+  calculated until after prereqs are available: restores the -also section
+  lost in version 0.09. Patch by Karen Etheridge. GitHub PR #2.
+
+- The generated files now include comments indicating what version of this
+  plugin was used to generate them.  Patch by Karen Etheridge. GitHub PR #1.
+
+
 0.14    2014-04-06
 
 - Same as 0.13001

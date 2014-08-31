@@ -1,5 +1,7 @@
 package Dist::Zilla::Plugin::Conflicts;
-$Dist::Zilla::Plugin::Conflicts::VERSION = '0.14';
+# git description: v0.14-14-g90f9864
+$Dist::Zilla::Plugin::Conflicts::VERSION = '0.15';
+
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -7,6 +9,7 @@ use namespace::autoclean;
 use Dist::CheckConflicts 0.02 ();
 use Dist::Zilla 4.0 ();
 use Dist::Zilla::File::InMemory;
+use Dist::Zilla::File::FromCode;
 use Moose::Autobox 0.09;
 
 use Moose;
@@ -97,9 +100,9 @@ sub gather_files {
     my $self = shift;
 
     $self->add_file(
-        Dist::Zilla::File::InMemory->new(
-            name    => $self->_conflicts_module_path(),
-            content => $self->_generate_conflicts_module(),
+        Dist::Zilla::File::FromCode->new(
+            name => $self->_conflicts_module_path(),
+            code => sub { $self->_generate_conflicts_module },
         )
     );
 
@@ -122,6 +125,8 @@ package # hide from PAUSE
 
 use strict;
 use warnings;
+
+# this module was generated with {{ ref($plugin) . ' ' . ($plugin->VERSION || '<self>') }}
 
 use Dist::CheckConflicts
     -dist      => '{{ $dist_name }}',
@@ -164,6 +169,7 @@ EOF
         return $self->fill_in_string(
             $conflicts_module_template,
             {
+                plugin         => \$self,
                 dist_name      => \$dist_name,
                 module_name    => \( $self->_conflicts_module_name() ),
                 conflicts_dump => \$conflicts_dump,
@@ -183,6 +189,8 @@ EOF
 use strict;
 use warnings;
 # %s: {{ $filename }}
+
+# this script was generated with {{ ref($plugin) . ' ' . ($plugin->VERSION || '<self>') }}
 
 use Getopt::Long;
 use {{ $module_name }};
@@ -209,6 +217,7 @@ EOF
         return $self->fill_in_string(
             $script_template,
             {
+                plugin      => \$self,
                 filename    => \$filename,
                 module_name => \( $self->_conflicts_module_name() ),
             },
@@ -357,13 +366,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Dist::Zilla::Plugin::Conflicts - Declare conflicts for your distro
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 SYNOPSIS
 
