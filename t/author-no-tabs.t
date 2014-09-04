@@ -20,6 +20,7 @@ my @files = (
     't/00-report-prereqs.dd',
     't/00-report-prereqs.t',
     't/01-basic.t',
+    't/02-surgical-podweaver.t',
     't/author-no-tabs.t',
     't/author-pod-spell.t',
     't/release-cpan-changes.t',

@@ -1,3 +1,11 @@
+0.16    2014-09-03
+
+- Add a hint for [SurgicalPodWeaver] so it does not try to modify the file (no
+  longer possible since version 0.15). Patch by Karen Etheridge. GitHub PR #3.
+
+- Repository moved to the github moose organization.
+
+
 0.15    2014-08-31
 
 - Generate the Conflicts module as a FromCode file, so its content is not

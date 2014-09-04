@@ -14,6 +14,7 @@ build_requires:
   Test::Differences: '0'
   Test::Fatal: '0'
   Test::More: '0.88'
+  Test::Requires: '0'
   if: '0'
   perl: '5.006'
 configure_requires:
@@ -28,7 +29,7 @@ name: Dist-Zilla-Plugin-Conflicts
 provides:
   Dist::Zilla::Plugin::Conflicts:
     file: lib/Dist/Zilla/Plugin/Conflicts.pm
-    version: '0.15'
+    version: '0.16'
 requires:
   Dist::CheckConflicts: '0.02'
   Dist::Zilla: '4.0'
@@ -47,8 +48,8 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-Conflicts
   homepage: http://metacpan.org/release/Dist-Zilla-Plugin-Conflicts
-  repository: git://github.com/autarch/Dist-Zilla-Plugin-Conflicts.git
-version: '0.15'
+  repository: git://github.com/moose/Dist-Zilla-Plugin-Conflicts.git
+version: '0.16'
 x_Dist_Zilla:
   perl:
     version: '5.016003'
@@ -191,10 +192,6 @@ x_Dist_Zilla:
       name: '@DROLSKY/CheckPrereqsIndexed'
       version: '0.012'
     -
-      class: Dist::Zilla::Plugin::ContributorsFromGit
-      name: '@DROLSKY/ContributorsFromGit'
-      version: '0.014'
-    -
       class: Dist::Zilla::Plugin::CopyReadmeFromBuild
       name: '@DROLSKY/CopyReadmeFromBuild'
       version: '0.0019'
@@ -216,6 +213,16 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Git::Describe
       name: '@DROLSKY/Git::Describe'
       version: '0.003'
+    -
+      class: Dist::Zilla::Plugin::Git::Contributors
+      config:
+        Dist::Zilla::Plugin::Git::Contributors:
+          include_authors: '0'
+          include_releaser: '1'
+          order_by: name
+          paths: []
+      name: '@DROLSKY/Git::Contributors'
+      version: '0.007'
     -
       class: Dist::Zilla::Plugin::InstallGuide
       name: '@DROLSKY/InstallGuide'
@@ -402,7 +409,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: v0.15
+          tag: v0.16
           tag_format: v%v
           tag_message: v%v
           time_zone: local

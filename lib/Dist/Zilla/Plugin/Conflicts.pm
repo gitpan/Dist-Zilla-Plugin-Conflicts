@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Conflicts;
-# git description: v0.14-14-g90f9864
-$Dist::Zilla::Plugin::Conflicts::VERSION = '0.15';
+# git description: v0.15-5-g26a6bfa
+$Dist::Zilla::Plugin::Conflicts::VERSION = '0.16';
 
 use strict;
 use warnings;
@@ -139,6 +139,7 @@ use Dist::CheckConflicts
 1;
 
 # TCARTSBA: Provide information on conflicts for {{ $dist_name }}
+# Dist::Zilla: -PodWeaver
 EOF
     # This is necessary to avoid confusing toolchain things - for example,
     # MetaCPAN seems to look for this when picking a summary for the recent
@@ -355,6 +356,16 @@ sub metadata {
     };
 }
 
+=begin Pod::Coverage
+
+  gather_files
+  metadata
+  register_prereqs
+  setup_installer
+
+=end Pod::Coverage
+
+=cut
 
 __PACKAGE__->meta->make_immutable;
 
@@ -363,18 +374,6 @@ __PACKAGE__->meta->make_immutable;
 # ABSTRACT: Declare conflicts for your distro
 
 __END__
-
-=pod
-
-=encoding UTF-8
-
-=head1 NAME
-
-Dist::Zilla::Plugin::Conflicts - Declare conflicts for your distro
-
-=head1 VERSION
-
-version 0.15
 
 =head1 SYNOPSIS
 
@@ -404,11 +403,6 @@ generated module and print warnings if conflicts are detected.
 
 Finally, it adds the conflicts to the F<META.json> and/or F<META.yml> files
 under the "x_breaks" key.
-
-=for Pod::Coverage   gather_files
-  metadata
-  register_prereqs
-  setup_installer
 
 =head1 USAGE
 
@@ -479,17 +473,5 @@ on free software full time, which seems unlikely at best.
 
 To donate, log into PayPal and send money to autarch@urth.org or use the
 button on this page: L<http://www.urth.org/~autarch/fs-donation.html>
-
-=head1 AUTHOR
-
-Dave Rolsky <autarch@urth.org>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is Copyright (c) 2014 by Dave Rolsky.
-
-This is free software, licensed under:
-
-  The Artistic License 2.0 (GPL Compatible)
 
 =cut
