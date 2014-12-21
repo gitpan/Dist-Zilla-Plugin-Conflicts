@@ -1,16 +1,15 @@
 package Dist::Zilla::Plugin::Conflicts;
-# git description: v0.15-5-g26a6bfa
-$Dist::Zilla::Plugin::Conflicts::VERSION = '0.16';
+# git description: v0.16-4-gea002e1
 
+$Dist::Zilla::Plugin::Conflicts::VERSION = '0.17';
 use strict;
 use warnings;
 use namespace::autoclean;
 
 use Dist::CheckConflicts 0.02 ();
-use Dist::Zilla 4.0 ();
+use Dist::Zilla 4.0           ();
 use Dist::Zilla::File::InMemory;
 use Dist::Zilla::File::FromCode;
-use Moose::Autobox 0.09;
 
 use Moose;
 
@@ -141,6 +140,7 @@ use Dist::CheckConflicts
 # TCARTSBA: Provide information on conflicts for {{ $dist_name }}
 # Dist::Zilla: -PodWeaver
 EOF
+
     # This is necessary to avoid confusing toolchain things - for example,
     # MetaCPAN seems to look for this when picking a summary for the recent
     # uploads page.
@@ -232,7 +232,7 @@ sub setup_installer {
     my $self = shift;
 
     my $found_installer;
-    for my $file ( $self->zilla()->files()->flatten() ) {
+    for my $file ( @{ $self->zilla()->files() } ) {
         if ( $file->name() =~ /Makefile\.PL$/ ) {
             $self->_munge_makefile_pl($file);
             $found_installer++;
@@ -349,11 +349,8 @@ sub metadata {
     my $self = shift;
 
     my $conflicts = $self->_conflicts;
-    return {
-        x_breaks => {
-            map { $_ => '<= '. $conflicts->{$_} } keys %$conflicts
-        }
-    };
+    return { x_breaks =>
+            { map { $_ => '<= ' . $conflicts->{$_} } keys %$conflicts } };
 }
 
 =begin Pod::Coverage
